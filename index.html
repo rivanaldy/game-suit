@@ -5,9 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="suit.css" />
+    <style>
+      .papanskor {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .papanskor > div {
+        margin: 0 10px;
+      }
+
+      .sekor,
+      .skor {
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Game Suit Jawa</h1>
+
+    <div class="papanskor">
+      <div>
+        Player:
+        <div class="sekor">0</div>
+      </div>
+      <div>
+        AI:
+        <div class="skor">0</div>
+      </div>
+    </div>
 
     <div class="container">
       <div class="area-komputer">

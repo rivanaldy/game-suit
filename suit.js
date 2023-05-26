@@ -29,20 +29,7 @@ if (new Date().getTime()-waktuMulai > 1000){
 imgKomputer.setAttribute('src',''+ gambar[i++] + '.png');
 if (i == gambar.length) i=0;
 
-},100)
-
-
-
-
-
-
-
-}
-
-
-
-
-
+},100)}
 
 
 const pilihan = document.querySelectorAll('li img');
@@ -61,9 +48,26 @@ pilComputer.setAttribute('src', ''+ pilihancomputer +'.png');
 
 const info= document.querySelector('.info');
 info.innerHTML=hasil;
+// Tambahkan skor
+const playerSkor = document.querySelector('.sekor');
+const komputerSkor = document.querySelector('.skor');
+let playerScore = parseInt(playerSkor.innerHTML);
+let komputerScore = parseInt(komputerSkor.innerHTML);
+
+if (hasil === 'win') {
+	playerScore++;
+} else if (hasil === 'lose') {
+	komputerScore++;
+}
+
+playerSkor.innerHTML = playerScore;
+komputerSkor.innerHTML = komputerScore;
 },1000);
 });
 });
+
+
+
 
 
 
